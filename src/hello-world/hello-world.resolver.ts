@@ -12,7 +12,10 @@ export class HelloWorldResolver {
     return Math.random() * 100;
   }
 
-  @Query(() => Int, { name: 'randomToZero' })
+  @Query(() => Int, {
+    name: 'randomToZero',
+    description: 'From zero to argument TO (default 10)',
+  })
   getRandomFromZeroTo(
     @Args('to', { nullable: true, type: () => Int }) to: number = 10,
   ): number {
