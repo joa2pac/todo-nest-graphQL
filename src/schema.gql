@@ -6,4 +6,5 @@ type Query {
   """Esto es un query"""
   Hola: String!
   randomNumber: Float!
+  randomToZero(to: Int): Int!
 }
